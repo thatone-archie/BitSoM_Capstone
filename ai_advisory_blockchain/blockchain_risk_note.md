@@ -1,44 +1,91 @@
-# AI-Augmented FinTech Advisory and Blockchain Risk
+# BitSoM Capstone Part 3 — AI-Augmented FinTech Advisory & Blockchain Risk
 
-This folder contains the deliverables for Parts D and E of the capstone assignment.
+This section is for all the files for Part 3 of the capstone assignment.
 
-## Included files
+## Included Files
 
 - **Part D — DCF valuation calculator:** [`dcf_calculator.ipynb`](./dcf_calculator.ipynb)
 - **Part E — Blockchain/crypto risk-analysis appendix:** [`blockchain_risk_note.md`](./blockchain_risk_note.md)
 
-## Part D — DCF valuation calculator
+## Part D — DCF Valuation Calculator
 
-The accompanying [`dcf_calculator.ipynb`](./dcf_calculator.ipynb) presents an illustrative five-year discounted-cash-flow valuation. It calculates unlevered Free Cash Flow to the Firm (FCFF) as:
+The discounted-cash-flow valuation calculator is available in [`dcf_calculator.ipynb`](./dcf_calculator.ipynb). The notebook projects five years of FCFF, calculates WACC, estimates terminal value, discounts the cash flows to present value, provides a 3 × 3 sensitivity table, checks the WACC–terminal-growth constraint, and compares the DCF valuation with an EV/EBITDA multiple.
 
-> **FCFF = EBIT × (1 − tax rate) + D&A − CapEx − ΔNet Working Capital**
+## Part E — Blockchain/Crypto Risk-Analysis Appendix
 
-The notebook projects cash flows over five years using a fading growth path, computes the cost of equity with CAPM, and blends it with an illustrative after-tax cost of debt to obtain WACC. It then estimates terminal value using the growing-perpetuity method, discounts the forecast cash flows and terminal value to the present, and reports enterprise and equity value. A 3 × 3 sensitivity table varies WACC and terminal growth by ±1 percentage point. The notebook also checks that WACC remains above terminal growth in the most aggressive sensitivity case and compares the DCF result with an illustrative EV/EBITDA valuation.
+### 1. Paytm Crypto Insights Watchlist
 
-## Part E — Blockchain/crypto risk-analysis appendix
+> A short assessment of what a hypothetical “Paytm Crypto Insights” watchlist feature would need to get right on stablecoin type and DeFi/DAO governance risk before Paytm could responsibly surface it to retail users (reference the fiat-collateralized vs. algorithmic stablecoin distinction and tokenomics/DAO governance risks).
 
-### 1. “Paytm Crypto Insights”: stablecoin and governance risks
+**Answer:**
 
-Before Paytm responsibly surfaces a hypothetical “Crypto Insights” watchlist to retail users, it should distinguish clearly between stablecoin designs. A **fiat-collateralized stablecoin** seeks to maintain its peg through reserves—such as cash and short-term government securities—held by an issuer or custodian. Its principal risks include inadequate or low-quality reserves, weak attestations, redemption restrictions, custodial failure, regulatory action, and loss of confidence in the issuer. Paytm should therefore display the reserve composition, frequency and independence of attestations, redemption rights, issuer jurisdiction, liquidity, and any history of de-pegging. The label “stable” must not be presented as equivalent to “risk-free.”
+Cryptocurrencies are digital, decentralized assets transacted globally on-chain without central banks or intermediaries. The transactions happen on a distributed ledger, and smart contracts (self-executing code) automatically carry out the agreed rules on the chain.
 
-An **algorithmic stablecoin**, by contrast, relies primarily on incentives, supply adjustments, arbitrage, or a linked token rather than fully matched fiat reserves. Such a design can enter a reflexive failure cycle: confidence falls, redemptions increase, the supporting token declines, and the mechanism loses the capacity to restore the peg. Paytm should classify these products separately, provide prominent warnings, and avoid implying that their historical price stability is a guarantee.
+Bitcoin has shown extreme price movements and is a highly volatile asset.
 
-The watchlist must also explain **tokenomics and DeFi/DAO governance risk**. Relevant indicators include token supply caps, issuance and inflation schedules, insider and treasury allocations, vesting and unlock dates, liquidity concentration, and the sustainability of staking or incentive rewards. Governance tokens do not necessarily provide shareholder-like rights or claims on cash flow. Voting power may be concentrated among founders, venture investors, delegates, or large token holders; low participation can allow a small group to change fees, collateral rules, treasury use, or smart-contract parameters. Paytm should surface governance concentration, admin-key and upgrade powers, voting participation, audit status, oracle and bridge dependencies, and material proposal history. Information should be educational and risk-ranked, not framed as an endorsement or promise of safety.
+Stablecoins are cryptocurrency tokens whose value is pegged to an underlying asset such as a fiat currency or a commodity. There are four types of stablecoins: fiat-collateralized, crypto-collateralized, commodity-backed, and algorithmic.
 
-### 2. Crypto as an asset class: recommendation for Paytm Money
+They are correlated to the underlying asset, making them more stable and reducing price volatility. A Paytm Crypto Insights watchlist should clearly distinguish fiat-collateralized stablecoins, which are supported by reserves, from algorithmic stablecoins, which depend on algorithms and market incentives to maintain their peg. The feature should explain that algorithmic stablecoins can be more vulnerable to losing their peg.
 
-For a mainstream retail advisory product, I recommend a **maximum strategic allocation of 1% of an investable portfolio**, available only to investors with high risk capacity, a long horizon, an adequate emergency fund, and no high-cost debt. A zero allocation should remain the default for conservative investors and anyone who cannot tolerate a complete loss. The 1% ceiling limits the portfolio-level damage of an extreme drawdown while allowing a suitable investor modest exposure to potential diversification or upside.
+DeFi governance relies on Decentralized Autonomous Organizations (DAOs)—internet-based organizations in which community members propose, discuss, and vote on smart-contract-enforced rules. Any change to the rules still has to go through proposal, discussion, and voting.
 
-The recommendation is intentionally conservative. In a CAPM-style framework, an asset is attractive when its expected return compensates for systematic risk. Cryptocurrency lacks the intrinsic cash flows, earnings, or dividends used to anchor conventional valuation, making its expected return difficult to justify using standard portfolio theory. Low or occasionally negative correlation with traditional assets may offer diversification, but correlations are unstable and can rise during market stress, precisely when diversification is most valuable.
+Holding tokens can qualify someone to be part of the governance body. Good tokenomics is designed with a clear supply cap, a predictable issuance schedule, balanced allocation, transparent vesting, a clear voting and governance process, and a reward process for genuine activity. Before surfacing a token to retail users, Paytm should explain risks such as concentrated token ownership, unequal voting power, unclear vesting, excessive token issuance, and governance decisions controlled by a small number of participants.
 
-Crypto returns are also heavy-tailed and often positively skewed: a few exceptional outcomes can lift the average while most observations are far less attractive. Historical analyses can materially overstate opportunity because of **survivorship bias** when failed, delisted, illiquid, or abandoned tokens are excluded. Trading spreads, exchange fees, network fees, custody costs, taxes, and slippage further reduce realized returns, especially for small retail accounts or frequent rebalancing. Paytm Money should therefore treat crypto as speculative satellite exposure rather than a core allocation, prohibit leverage in an advisory portfolio, use suitability checks and explicit loss warnings, and rebalance rather than allow price appreciation to push exposure above the 1% cap.
+### 2. Crypto as an Asset Class
 
-### 3. T.A.N.G. fraud framework: two priority risks and defenses
+> A crypto-as-an-asset-class recommendation for Paytm Money: using the standard finding that CAPM-style portfolio theory does not favor including an asset lacking intrinsic value/dividends, such as cryptocurrency, in an optimal portfolio, together with low/negative correlation with traditional assets, heavy-tailed/positively-skewed returns, survivorship bias, and high transaction costs, state a specific, justified maximum allocation percentage (or a justified “zero allocation”) recommendation for a retail advisory product.
 
-The two most relevant social-engineering vectors for a combined UPI/wallet, lending, and wealth platform are **Authority plus Need** and **Temptation plus Greed**.
+**Answer:**
 
-1. **Authority + Need — impersonation and urgent payment manipulation.** A fraudster may pose as Paytm support, a bank officer, a lender, a regulator, or a merchant and claim that KYC will expire, a loan is overdue, an account is blocked, or a refund requires immediate action. The victim may be induced to approve a UPI collect request, scan a malicious QR code, disclose an OTP, or install a screen-sharing application. A strong bank-side real-time defense is a **risk-based transaction-intervention engine** that combines new-beneficiary status, device changes, remote-access or screen-sharing signals, unusual amount or velocity, location/IP anomalies, and known mule-account intelligence. High-risk payments should trigger a clear payee-and-purpose warning, a cooling-off period, or a temporary block with step-up verification through a trusted in-app channel.
+CAPM is a model that estimates the expected return of an asset, given its volatility (beta) relative to the market.
 
-2. **Temptation + Greed — fake investment or loan offers.** Scammers may promise guaranteed crypto returns, pre-IPO access, instant high-limit loans, fee-free refinancing, or rewards that require an advance payment. They often move victims from social media to counterfeit apps or mule accounts. The corresponding defense is **real-time beneficiary and scam-pattern scoring**: the bank should assess recipient-account age, sudden inbound-fund spikes, rapid pass-through behavior, links to previously reported fraud, and many unrelated retail senders. Payments to high-risk beneficiaries should be delayed or blocked, accompanied by a warning that guaranteed returns or advance fees are common scam indicators, and routed for rapid confirmation and investigation.
+Traditional tools such as CAPM and the Gordon Growth Model advise against holding crypto because it generates no earnings or dividends. Looking at crypto through these two lenses implies not holding crypto at all because there are no underlying earnings; crypto is simply a mode of exchange.
 
-These controls reduce harm at the moment of decision, when T.A.N.G.-based pressure is strongest, while preserving a clear path for legitimate customers to verify and complete genuine transactions.
+However, empirically, cryptocurrency shows high average returns, high standard deviation, positively skewed return distributions, and a beta relative to the S&P 500 that is less than one. The same traditional theories advise against holding cash, and yet people do. From 2017–2021, the price appreciation of Bitcoin was 284%, much higher than gold or the S&P 500. With increased clarity in crypto regulation, many institutions invested in Bitcoin.
+
+A Goldman Sachs simulation showed that reallocating 2.5% of a 60/40 portfolio to Bitcoin boosted annualized returns by 165 basis points. While the simulation results showed good portfolio returns, they ignored the cost of investing in Bitcoin and its risks. Cryptocurrency transaction costs can be very high.
+
+**Survivorship bias:** Calculating returns from the top two or three cryptocurrencies and assuming the same effect for the many other cryptocurrencies available.
+
+**Concentration risk:** There is no mechanism that prevents large institutions from holding large amounts of crypto; therefore, concentration risk remains an open, unresolved issue.
+
+Bitcoin shows a positively skewed return distribution, as a small number of exceptional days pulled the mean above the median, while on most days the return was low or negative. Crypto returns can also be heavy-tailed, meaning extreme gains and losses occur more frequently than a normal distribution would suggest.
+
+Yet crypto can appeal to many investors for reasons such as hedging and portfolio diversification, including its low or negative correlation with some traditional assets. Investing in crypto should be measured according to an individual’s time horizon and risk-taking appetite. Even when an asset is highly volatile, it can be worth holding if its returns compensate for its risk.
+
+Crypto assets are not safe; they are speculative assets. I recommend that Paytm allow a cautious allocation of **no more than 5%** for suitable retail investors for reasons such as hedging and diversification, while continuously monitoring the investment. A lower allocation, including zero, would be more appropriate for conservative investors or those with a short time horizon.
+
+### 3. T.A.N.G. Fraud Framework
+
+> A short section applying the T.A.N.G. (Temptation/Authority/Need/Greed) fraud framework to identify the two social-engineering risk vectors you consider most relevant to a UPI/wallet + lending + wealth platform specifically, and one bank-side real-time defense mechanism that mitigates each.
+
+**Answer:**
+
+Cybersecurity protects systems and devices, networks, and data. Cyber fraud is about deceiving people to gain access to their money, identity, and accounts. Both are required to combat fraud and scams.
+
+Social-engineering scams exploit human psychology using the T.A.N.G. framework:
+
+- **Temptation:** Unrealistic, low-effort riches.
+- **Authority:** Impersonating trusted authorities.
+- **Need:** Creating artificial urgency.
+- **Greed:** Promising outsized returns.
+
+The two most relevant risk vectors for a UPI/wallet, lending, and wealth platform are the following:
+
+#### Risk Vector 1 — Authority and Need
+
+For a UPI/wallet digital-payment system, it is easy to trick people with a QR code that sends a payment to a fraudster’s account. A scammer may impersonate bank or platform support and create urgency by claiming that KYC must be updated, an account will be blocked, or a refund must be collected immediately. Being cautious and checking before making payments can reduce the risk of sending money to the wrong user. If someone is creating urgency, step back and analyze.
+
+**Bank-side real-time defense:** Banks can use real-time transaction monitoring and AI-based user-behavior anomaly detection. Signals can include SIM-card status, device ID, location, IP address, a new beneficiary, and unusual payment behavior. A high-risk transaction can be paused and subjected to additional verification. Payment apps can also use defenses such as screen-share blackouts. Banks require authentication to confirm payments; users should not share an OTP or password or click links received from suspicious sources.
+
+#### Risk Vector 2 — Temptation and Greed
+
+For lending and wealth platforms, a user may receive an offer from a fake lender or lending app, or an investment offer promising returns that are too good to be true. Users should check the source of the information, keep their apps updated, install antivirus software, and avoid links that lead to unrealistic offers. If an opened link tries to gain remote access to a device, the user should go into the phone’s settings and disable remote access.
+
+**Bank-side real-time defense:** Banks can use AI to identify fraudulent burner and mule accounts through beneficiary-risk scoring, transaction-velocity analysis, and unusual movement of funds. Transfers to a high-risk recipient can be delayed, blocked, or escalated for verification before the money leaves the customer’s account.
+
+Any social-engineering scam thrives on impulsive action: stop, think, verify, and then act.
+
+For a wealth platform, users should protect their accounts with at least two-factor authentication (2FA), such as a password combined with biometrics or an OTP. They should check account statements regularly to flag anything suspicious, never share authentication details, change passwords regularly, use strong passwords, and avoid reusing the same password across different apps.
+
+Every payment transaction is monitored for fraud and anomalies by banks before it is authenticated and authorized. Banks use AI for user-behavior anomaly detection and document verification. Banks also invest in awareness programs to keep their stakeholders safe. Awareness, behavioral controls, and safe habits can act as strong defenses against scams.
