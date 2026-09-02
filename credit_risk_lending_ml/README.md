@@ -263,6 +263,6 @@ Logistic Regression performs better than the Decision Tree on every reported met
 - **F1-score:** 0.3684 vs. 0.2553
 - **ROC-AUC:** 0.7188 vs. 0.5188
 
-For a lender, recall is important because false negatives mean risky borrowers were not identified, while the stronger ROC-AUC indicates better overall discrimination. Logistic Regression is also useful for explaining which attributes contributed to the predicted target, making it a better choice for explaining predictions to end users and regulators.
+For lenders, high recall is vital because missing a risky borrower (a false negative) directly increases credit risk, while a strong ROC-AUC confirms the model effectively separates good and bad applicants. Furthermore, Logistic Regression provides clear attribute-level explanations, making it highly useful when justifying credit decisions to end users and financial regulators.
 
 > **Complementary control:** Isolation Forest should remain an anomaly-detection control alongside the classifier. It achieved **73.33% seeded-anomaly recall (11 of 15)**.
