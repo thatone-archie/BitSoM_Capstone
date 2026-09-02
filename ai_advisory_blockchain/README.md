@@ -11,7 +11,10 @@ For the Paytm business valuation, refer to [`dcf_calculator.ipynb`](./dcf_calcul
 - CAPM and DCF (intrinsic valuation)
 - Peer multiples
 
-I have made assumptions for the Paytm business financials in [`financials_summary.csv`](./financials_summary.csv). Other assumptions are available in [`dcf_assumptions.csv`](./dcf_assumptions.csv) and [`dcf_growth_path.csv`](./dcf_growth_path.csv).
+I have made assumptions for the Paytm business financials in [`financials_summary.csv`](./financials_summary.csv). 
+
+Other assumptions are available in [`dcf_assumptions.csv`](./dcf_assumptions.csv) and [`dcf_growth_path.csv`](./dcf_growth_path.csv) , [`peer_multiples.csv`](./peer_multiples.csv).
+
 
 Sensitivity table (3 × 3 grid):
 
