@@ -1,0 +1,12 @@
+assumption,value,note
+risk_free_rate,0.067,"India 10Y G-sec, approx"
+equity_risk_premium,0.065,long-run equity premium over G-sec
+beta,1.05,stock vs market sensitivity
+pre_tax_cost_of_debt,0.085,company's borrowing rate before tax
+tax_rate,0.25,corporate tax rate
+weight_equity,0.75,target equity weight in capital
+weight_debt,0.25,target debt weight in capital
+dep_pct_of_revenue,0.035,D&A as % of revenue
+capex_pct_of_revenue,0.055,capital spend as % of revenue
+nwc_pct_of_rev_change,0.02,working-capital need per Rs of revenue growth
+terminal_growth,0.05,perpetual growth after year 5 (<= long-run GDP)
