@@ -1,1 +1,0 @@
-CREATE TABLE merchants (merchant_id INTEGER PRIMARY KEY, merchant_name TEXT, category TEXT, region TEXT)
