@@ -1,17 +1,4 @@
-# BitSoM Capstone Part 3 — AI-Augmented FinTech Advisory & Blockchain Risk
-
-This section is for all the files for Part 3 of the capstone assignment.
-
-## Included Files
-
-- **Part D — DCF valuation calculator:** [`dcf_calculator.ipynb`](./dcf_calculator.ipynb)
-- **Part E — Blockchain/crypto risk-analysis appendix:** [`blockchain_risk_note.md`](./blockchain_risk_note.md)
-
-## Part D — DCF Valuation Calculator
-
-The discounted-cash-flow valuation calculator is available in [`dcf_calculator.ipynb`](./dcf_calculator.ipynb). The notebook projects five years of FCFF, calculates WACC, estimates terminal value, discounts the cash flows to present value, provides a 3 × 3 sensitivity table, checks the WACC–terminal-growth constraint, and compares the DCF valuation with an EV/EBITDA multiple.
-
-## Part E — Blockchain/Crypto Risk-Analysis Appendix
+# Part E — Blockchain/Crypto Risk-Analysis Appendix
 
 ### 1. Paytm Crypto Insights Watchlist
 
@@ -19,7 +6,7 @@ Cryptocurrencies are digital, decentralized assets transacted globally on-chain.
 
 Stablecoins are cryptocurrency tokens whose value is pegged to an underlying asset such as a fiat currency or commodity. There are four types: fiat-collateralized, crypto-collateralized, commodity-backed, and algorithmic. This can reduce price volatility. Paytm must explain that a fiat-collateralized stablecoin is backed by reserves, while an algorithmic stablecoin depends on algorithms and market incentives and can be more vulnerable to collapse.
 
-DeFi governance relies on Decentralized Autonomous Organizations (DAOs)—internet-based organizations in which community members propose, discuss, and vote on smart-contract-enforced rules. Any change to the rules still has to go through proposal, discussion, and voting.
+DeFi governance relies on Decentralized Autonomous Organizations (DAOs), where members propose, discuss, and vote on smart-contract-enforced rules. Rule changes still require proposal, discussion, and voting.
 
 Holding tokens can qualify someone to be part of the governance body. Good tokenomics is designed with a clear supply cap, predictable issuance schedule, balanced allocation, transparent vesting, a clear voting and governance process, and rewards for genuine activity. Before surfacing a token to retail users, Paytm should clearly show these factors and warn users about concentrated ownership, unequal voting power, unclear vesting, excessive issuance, smart-contract risk, and governance controlled by a small number of participants.
 
